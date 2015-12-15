@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fragment:ModelFragments xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/descriptor/basic" xmlns:commands="http://www.eclipse.org/ui/2010/UIModel/application/commands" xmlns:fragment="http://www.eclipse.org/ui/2010/UIModel/fragment" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_1vhdMJgeEeWwqZVQW13qDQ">
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_0ZcQAKMfEeWEeu3woSF9dQ" featurename="commands" parentElementId="org.eclipse.e4.legacy.ide.application">
+    <elements xsi:type="commands:Command" xmi:id="_Cecb0KMgEeWEeu3woSF9dQ" elementId="me.natejones.explorer.command.newexplorerview" commandName="New Explorer View"/>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_Go5DAKMgEeWEeu3woSF9dQ" featurename="handlers" parentElementId="org.eclipse.e4.legacy.ide.application">
+    <elements xsi:type="commands:Handler" xmi:id="_K96igKMgEeWEeu3woSF9dQ" elementId="me.natejones.explorer.handler.0" contributionURI="bundleclass://me.natejones.explorer/me.natejones.explorer.NewExplorerHandler" command="_Cecb0KMgEeWEeu3woSF9dQ"/>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_VHn9cKMgEeWEeu3woSF9dQ" featurename="menuContributions" parentElementId="org.eclipse.e4.legacy.ide.application">
+    <elements xsi:type="menu:MenuContribution" xmi:id="_aOH9MKMgEeWEeu3woSF9dQ" elementId="me.natejones.explorer.menucontribution.0" positionInParent="after=additions" parentId="org.eclipse.ui.main.menu">
+      <children xsi:type="menu:Menu" xmi:id="_YNFdEKMhEeWEeu3woSF9dQ" elementId="me.natejones.explorer.menu.explorer" label="Explorer">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_rHSSsKMgEeWEeu3woSF9dQ" elementId="id.newexplorerview" label="New Explorer View" command="_Cecb0KMgEeWEeu3woSF9dQ"/>
+      </children>
+    </elements>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_glzUIKMkEeWEeu3woSF9dQ" featurename="descriptors" parentElementId="org.eclipse.e4.legacy.ide.application">
+    <elements xsi:type="basic:PartDescriptor" xmi:id="_l1dP4KMkEeWEeu3woSF9dQ" elementId="me.natejones.explorer.partdescriptor.explorer" label="Explorer" allowMultiple="true" closeable="true" contributionURI="bundleclass://me.natejones.explorer/me.natejones.explorer.ExplorerPart"/>
+  </fragments>
+</fragment:ModelFragments>
