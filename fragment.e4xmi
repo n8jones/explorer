@@ -14,6 +14,8 @@
     </elements>
   </fragments>
   <fragments xsi:type="fragment:StringModelFragment" xmi:id="_glzUIKMkEeWEeu3woSF9dQ" featurename="descriptors" parentElementId="org.eclipse.e4.legacy.ide.application">
-    <elements xsi:type="basic:PartDescriptor" xmi:id="_l1dP4KMkEeWEeu3woSF9dQ" elementId="me.natejones.explorer.partdescriptor.explorer" label="Explorer" allowMultiple="true" closeable="true" contributionURI="bundleclass://me.natejones.explorer/me.natejones.explorer.ExplorerPart"/>
+    <elements xsi:type="basic:PartDescriptor" xmi:id="_l1dP4KMkEeWEeu3woSF9dQ" elementId="me.natejones.explorer.partdescriptor.explorer" label="Explorer" allowMultiple="true" closeable="true" contributionURI="bundleclass://me.natejones.explorer/me.natejones.explorer.ExplorerPart">
+      <toolbar xmi:id="_tHLTcKS4EeWP8LnoySiL2A" elementId="me.natejones.explorer.toolbar.0"/>
+    </elements>
   </fragments>
 </fragment:ModelFragments>
