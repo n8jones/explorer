@@ -23,17 +23,19 @@ public class FindDuplicatesHandler {
 	public void execute(
 			@Named(IServiceConstants.ACTIVE_SELECTION) Item selection)
 					throws IOException {
-		Path p = Paths.get(selection.getName());
+		Path p = selection.getPath();
 		List<Path> files = new ArrayList<>();
 		FileVisitor<Path> visitor = new SimpleFileVisitor<Path>() {
 			@Override
 			public FileVisitResult visitFile(Path file, BasicFileAttributes attrs)
 					throws IOException {
-				System.out.println(file);
+				if(Files.isReadable(file))
+					files.add(file);
 				return FileVisitResult.CONTINUE;
 			}
 		};
 		Files.walkFileTree(p, visitor);
+		System.out.println(files);
 	}
 
 	@CanExecute
