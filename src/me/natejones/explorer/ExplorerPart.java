@@ -1,7 +1,6 @@
 
 package me.natejones.explorer;
 
-import java.awt.datatransfer.StringSelection;
 import java.io.IOException;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
@@ -11,8 +10,10 @@ import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
 import javax.annotation.PostConstruct;
+import javax.inject.Inject;
 
 import org.eclipse.e4.ui.model.application.ui.basic.MPart;
+import org.eclipse.e4.ui.workbench.modeling.ESelectionService;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
@@ -33,6 +34,8 @@ public class ExplorerPart {
 	private final ObservableList<Item> items =
 			FXCollections.observableArrayList();
 	private TextField pathCtl;
+	@Inject
+	private ESelectionService selectionService;
 
 	@PostConstruct
 	public void postConstruct(Composite parent, MPart part) throws IOException {
@@ -47,6 +50,10 @@ public class ExplorerPart {
 		grid.add(goBtn, 2, 1);
 		TableView<Item> table = new TableView<>(items);
 		table.setOnMouseClicked(e -> {
+			if (table.getSelectionModel().isEmpty())
+				return;
+			selectionService
+					.setSelection(table.getSelectionModel().getSelectedItem());
 			if (e.getClickCount() != 2)
 				return;
 			Item i = table.getSelectionModel().getSelectedItem();

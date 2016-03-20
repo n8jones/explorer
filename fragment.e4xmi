@@ -15,6 +15,10 @@
   </fragments>
   <fragments xsi:type="fragment:StringModelFragment" xmi:id="_glzUIKMkEeWEeu3woSF9dQ" featurename="descriptors" parentElementId="org.eclipse.e4.legacy.ide.application">
     <elements xsi:type="basic:PartDescriptor" xmi:id="_l1dP4KMkEeWEeu3woSF9dQ" elementId="me.natejones.explorer.partdescriptor.explorer" label="Explorer" allowMultiple="true" closeable="true" contributionURI="bundleclass://me.natejones.explorer/me.natejones.explorer.ExplorerPart">
+      <menus xmi:id="_pqb4MO7lEeWDa_6DM_n8Aw" elementId="me.natejones.explorer.menu.0">
+        <tags>ViewMenu</tags>
+        <children xsi:type="menu:DirectMenuItem" xmi:id="_SL_tQO7kEeW58ZOiuWmUgw" elementId="me.natejones.explorer.directmenuitem.findduplicates" label="Find Duplicates" contributionURI="bundleclass://me.natejones.explorer/me.natejones.explorer.FindDuplicatesHandler"/>
+      </menus>
       <toolbar xmi:id="_tHLTcKS4EeWP8LnoySiL2A" elementId="me.natejones.explorer.toolbar.0"/>
     </elements>
   </fragments>
