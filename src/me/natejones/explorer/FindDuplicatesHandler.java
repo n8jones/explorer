@@ -18,7 +18,17 @@ import org.eclipse.e4.core.di.annotations.CanExecute;
 import org.eclipse.e4.core.di.annotations.Execute;
 import org.eclipse.e4.ui.services.IServiceConstants;
 
+/**
+ * 
+ */
 public class FindDuplicatesHandler {
+	/**
+	 * Performs the finding of duplicates.
+	 * 
+	 * @param selection
+	 *           the selection service
+	 * @throws IOException
+	 */
 	@Execute
 	public void execute(
 			@Named(IServiceConstants.ACTIVE_SELECTION) Item selection)
@@ -29,7 +39,7 @@ public class FindDuplicatesHandler {
 			@Override
 			public FileVisitResult visitFile(Path file, BasicFileAttributes attrs)
 					throws IOException {
-				if(Files.isReadable(file))
+				if (Files.isReadable(file))
 					files.add(file);
 				return FileVisitResult.CONTINUE;
 			}
